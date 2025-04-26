@@ -7,29 +7,23 @@
           <li><router-link to="/">Home</router-link></li>
           <li><router-link to="/products">Products</router-link></li>
 
-          <!-- Show Cart link if user is authenticated -->
           <li v-if="isAuthenticated"><router-link to="/cart">Cart</router-link></li>
 
-          <!-- Show ManageProduct link if user is admin -->
           <li v-if="isAuthenticated && userRole === 'admin'">
             <router-link to="/manage-products">Manage Product</router-link>
           </li>
 
-          <!-- Show ManageUsers link if user is admin -->
           <li v-if="isAuthenticated && userRole === 'admin'">
             <router-link to="/manage-users">Manage Users</router-link>
           </li>
 
-          <!-- Show login if the user is not authenticated -->
           <li v-if="!isAuthenticated"><router-link to="/login">Login</router-link></li>
 
-          <!-- Show logout if the user is authenticated -->
-          <li v-else><button @click="logout">Logout</button></li>
+          <li v-else><button @click="handleLogout">Logout</button></li>
         </ul>
       </nav>
     </header>
 
-    <!-- Display routes -->
     <router-view />
   </div>
 </template>
@@ -44,12 +38,15 @@ export default {
   },
   methods: {
     ...mapActions(['logout']),
+    async handleLogout() {
+      await this.logout(); 
+      this.$router.push('/');
+    },
   },
 };
 </script>
 
 <style>
-/* Styles for the navigation bar */
 .navbar {
   display: flex;
   justify-content: space-between;
