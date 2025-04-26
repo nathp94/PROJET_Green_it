@@ -1,31 +1,38 @@
-const Sequelize = require('sequelize');
-const config = require('../config/db.config');
+const { Sequelize } = require('sequelize');
 
-const sequelize = new Sequelize(config.DB, config.USER, config.PASSWORD, {
-  host: config.HOST,
-  dialect: config.dialect,
-});
+// Connection directe sans passer par config
+const sequelize = new Sequelize(
+  process.env.DB_NAME,
+  process.env.DB_USER,
+  process.env.DB_PASSWORD,
+  {
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    dialect: 'postgres',
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false,
+      },
+    },
+    pool: {
+      max: 5,
+      min: 0,
+      acquire: 30000,
+      idle: 10000,
+    },
+  }
+);
 
 const db = {};
 
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-
 db.users = require('./user.model')(sequelize, Sequelize);
 db.products = require('./product.model')(sequelize, Sequelize);
 db.cartItems = require('./cart.model')(sequelize, Sequelize);
 
-
 db.cartItems.belongsTo(db.products, { foreignKey: 'productId', as: 'product' });
-
-
-db.sequelize.sync({ alter: true })
-  .then(() => {
-    console.log('Base de données synchronisée avec succès.');
-  })
-  .catch((error) => {
-    console.error('Erreur lors de la synchronisation de la base de données :', error);
-  });
 
 module.exports = db;

@@ -2,16 +2,17 @@
 require('dotenv').config();
 
 const express = require('express');
-const bodyParser = require('body-parser');
 const cors = require('cors');
+const bodyParser = require('body-parser');
 
-// Initialize Express app
+// Import database models
+const db = require('./models');
+
+// Create Express app
 const app = express();
 
-// Enable CORS for all routes
-app.use(cors());
-
 // Middleware
+app.use(cors());
 app.use(bodyParser.json());
 
 // Import routes
@@ -24,10 +25,18 @@ app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/users', userRoutes);
 
-// Set port and start server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`🚀 Server is running on port ${PORT}`);
-});
+// Database sync and start server
+db.sequelize.sync()
+  .then(() => {
+    console.log('✅ Database connected and synchronized');
+    const PORT = process.env.PORT || 3000;
+    app.listen(PORT, () => {
+      console.log(`🚀 Server is running on port ${PORT}`);
+    });
+  })
+  .catch((error) => {
+    console.error('❌ Database connection failed:', error);
+  });
 
+// Export app
 module.exports = app;

@@ -1,10 +1,11 @@
+require('dotenv').config(); // Charger .env
 const bcrypt = require('bcryptjs');
-const db = require('./models'); // Importing the models
+const db = require('./models'); // Importer les models Sequelize
 
 const seedDatabase = async () => {
   try {
-    // Synchronizing and resetting the database
-    await db.sequelize.sync({ force: true });
+    console.log('🔄 Synchronizing database...');
+    await db.sequelize.sync({ force: true }); // Reset tables
     console.log('Database synchronized.');
 
     // User data with hashed passwords
@@ -29,6 +30,7 @@ const seedDatabase = async () => {
     // Inserting users
     await db.users.bulkCreate(users);
     console.log('Users inserted successfully.');
+    
 
     // Product data
     const products = [
