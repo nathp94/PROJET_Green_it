@@ -15,37 +15,36 @@ Avant de commencer, assurez-vous que **Node.js** est installé sur votre machine
 
 
 2. **Installer les dépendances du frontend (Vue.js)**
-cd proj
-npm install
+   ```bash
+   cd proj
+   npm install
 
 3. **Installer les dépendances du backend (Node.js/Express)**
-cd proj/backend
-npm install
+   ```bash
+   cd backend
+   npm install
+
 
 
 ---
+### Lancer le projet
 
-
-```markdown
 ## Lancer le serveur Backend
 
 Depuis le dossier `backend/` :
 
-```bash
-cd proj/backend
-node server.js
+   ```bash
+   cd proj/backend
+   node server.js
 
 
 ---
-
-# Lancer le serveur Frontend
-
 
 ## Lancer le serveur Frontend (Vue.js)
 
 Depuis le dossier `proj/` :
 
-
-cd proj
-npm run serve
+   ```bash
+   cd proj
+   npm run serve
 
