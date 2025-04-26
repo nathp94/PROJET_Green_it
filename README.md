@@ -25,10 +25,9 @@ npm install
 
 ---
 
-#  Lancer le serveur Backend
 
 ```markdown
-## 🚀 Lancer le serveur Backend
+## Lancer le serveur Backend
 
 Depuis le dossier `backend/` :
 
@@ -41,12 +40,12 @@ node server.js
 
 # Lancer le serveur Frontend
 
-```markdown
-## 🚀 Lancer le serveur Frontend (Vue.js)
+
+## Lancer le serveur Frontend (Vue.js)
 
 Depuis le dossier `proj/` :
 
-```bash
+
 cd proj
 npm run serve
 
