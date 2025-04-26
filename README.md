@@ -31,7 +31,7 @@ Avant de commencer, assurez-vous que **Node.js** est installé sur votre machine
 
 ---
 
-## Lancer le serveur
+## Lancer le Backend (API Express)
 
 Depuis le dossier `proj/backend/` :
 
@@ -42,7 +42,7 @@ Depuis le dossier `proj/backend/` :
 
 ---
 
-## Lancer le serveur Frontend (Vue.js)
+## Lancer le Frontend (Vue.js)
 
 Depuis le dossier `proj/` :
 
