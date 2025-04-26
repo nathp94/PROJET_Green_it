@@ -50,3 +50,9 @@ Depuis le dossier `proj/` :
    cd proj
    npm run serve
    ```
+
+Compte admin pour pouvoir gérer les produits et utilisateurs : 
+admin
+admin123
+admin2
+admin1234
