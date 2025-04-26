@@ -12,31 +12,33 @@ Avant de commencer, assurez-vous que **Node.js** est installé sur votre machine
 1. **Cloner le projet :**
    ```bash
    git clone <URL_DU_DEPOT_GITHUB>
+   ```
 
 
 2. **Installer les dépendances du frontend (Vue.js)**
    ```bash
    cd proj
    npm install
+   ```
 
 3. **Installer les dépendances du backend (Node.js/Express)**
    ```bash
    cd backend
    npm install
+   ```
 
 
 
 ---
-### Lancer le projet
 
-## Lancer le serveur Backend
+## Lancer le serveur
 
-Depuis le dossier `backend/` :
+Depuis le dossier `proj/backend/` :
 
    ```bash
    cd proj/backend
    node server.js
-
+   ```
 
 ---
 
@@ -47,4 +49,4 @@ Depuis le dossier `proj/` :
    ```bash
    cd proj
    npm run serve
-
+   ```
