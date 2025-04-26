@@ -23,7 +23,7 @@ Avant de commencer, assurez-vous que **Node.js** est installé sur votre machine
 
 3. **Installer les dépendances du backend (Node.js/Express)**
    ```bash
-   cd backend
+   cd proj/backend
    npm install
    ```
 
