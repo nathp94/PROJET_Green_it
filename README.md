@@ -52,13 +52,11 @@ Depuis le dossier `proj/` :
    npm run serve
    ```
 
+---
+
 Compte admin pour pouvoir gérer les produits et utilisateurs : 
 admin
 admin123
-admin2
-admin1234
-
----
 
 ## Déploiement
 
@@ -80,6 +78,8 @@ En effet, les services gratuits :
 Limitent la puissance et la disponibilité par rapport aux plans payants.
 
 Peuvent occasionner des erreurs comme des délais d'attente ou des erreurs 502/504 temporaires.
+
+---
 
 # Wireframe
 
