@@ -23,7 +23,7 @@ export default {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url('../assets/background.jpg') no-repeat center center/cover;
+  background: url('../assets/background.webp') no-repeat center center/cover;
   color: #fff;
   text-align: center;
   padding: 0 20px;
