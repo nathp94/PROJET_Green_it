@@ -63,7 +63,9 @@ admin1234
 ## Déploiement
 
 Frontend : hébergé sur Vercel
+
 Backend : hébergé sur Render
+
 Base de données : hébergée sur Supabase (PostgreSQL)
 
 ## Hébergement et Disponibilité
