@@ -130,7 +130,7 @@ config/ : Configuration de la base de données (db.config.js)
 
 ---
 ### Fonctionnalités principales
-
+```
 Fonctionnalité | Description
 Authentification : Login utilisateur (avec rôle : user/admin)
 Produit : Recherche de produits
@@ -138,3 +138,4 @@ Panier : Ajout et suppression d'articles au panier
 Gestion des produits : Affichage, ajout, suppression de produits (admin uniquement)
 Gestion des utilisateurs : Supprimer des utilisateurs (sauf les admins)
 Sécurité : Mots de passe hashés avec bcryptjs et authentification par JWT
+```
