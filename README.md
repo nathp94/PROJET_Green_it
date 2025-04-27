@@ -78,7 +78,7 @@ Cependant, étant donné que nous utilisons des services gratuits, le serveur et
 ---
 
 # Wireframe
-
+```
 Page d'accueil User
 
 HEADER
@@ -104,7 +104,7 @@ BODY
 Manage Users
 admin — Role: admin        Admin (Not deletable)
 user1 — Role: user         User (Delete)
-
+```
 ---
 
 # Structure
