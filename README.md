@@ -83,6 +83,7 @@ Cependant, étant donné que nous utilisons des services gratuits, le serveur et
 
 ## 🌐 Frontend - Vue.js (dossier `proj/src`)
 
+(dossier `proj/src/components`)
 - **HomePage (Accueil)** :
   - Présentation générale de la parfumerie.
   - Image de fond immersive.
