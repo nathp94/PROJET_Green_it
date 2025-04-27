@@ -57,6 +57,7 @@ Depuis le dossier `proj/` :
 Compte admin pour pouvoir gérer les produits et utilisateurs : 
 admin
 admin123
+---
 
 ## Déploiement
 
@@ -76,6 +77,94 @@ Notre projet est hébergé gratuitement sur des plateformes telles que Render, V
 Cependant, étant donné que nous utilisons des services gratuits, le serveur et le site web peuvent mettre plusieurs secondes à démarrer ou parfois être temporairement inaccessibles.
 
 ---
+
+### Fonctionnalités principales
+```
+Authentification : Login utilisateur (avec rôle : user/admin)
+Produit : Recherche de produits
+Panier : Ajout et suppression d'articles au panier
+Gestion des produits : Affichage, ajout, suppression de produits (admin uniquement)
+Gestion des utilisateurs : Supprimer des utilisateurs (sauf les admins)
+Sécurité : Mots de passe hashés avec bcryptjs et authentification par JWT
+```
+# Description des différentes parties du site et des fonctionnalités
+
+## 🌐 Frontend - Vue.js (dossier `proj/`)
+
+- **HomePage (Accueil)** :
+  - Présentation générale de la parfumerie.
+  - Image de fond immersive.
+  - Bouton "Explore Products" redirigeant vers les produits.
+  
+- **ProductsPage (Produits)** :
+  - Liste des produits disponibles, affichés sous forme de cartes.
+  - Fonction de recherche de produit par nom.
+  - Affichage du prix, note, description de chaque parfum.
+  - Possibilité d’ajouter des produits au panier (si connecté).
+
+- **CartPage (Panier)** :
+  - Affichage des produits ajoutés au panier.
+  - Modification des quantités ou suppression d'articles.
+  - Calcul du prix total.
+
+- **LoginPage (Connexion)** :
+  - Connexion utilisateur avec gestion des rôles (`user` ou `admin`).
+  - Utilisation de JWT pour la session.
+
+- **Admin - ManageProductPage** :
+  - Pour les administrateurs seulement.
+  - Ajout de nouveaux produits.
+  - Suppression de produits existants.
+
+- **Admin - ManageUsersPage** :
+  - Gestion des utilisateurs du site.
+  - Affichage de tous les utilisateurs.
+  - Suppression possible des utilisateurs (hors admin).
+
+---
+
+## 🛠️ Backend - Express.js + Sequelize (dossier `proj/backend/`)
+
+- **server.js** :
+  - Fichier principal de configuration Express et connexion à la base de données.
+
+- **models/** :
+  - Définition des modèles Sequelize :
+    - `User` : gestion des utilisateurs, mots de passe hashés, rôles.
+    - `Product` : gestion des parfums (nom, description, prix, stock, image, note).
+    - `CartItem` : gestion des articles ajoutés au panier.
+
+- **routes/** :
+  - `auth.routes.js` : authentification (login, gestion JWT).
+  - `product.routes.js` : API CRUD pour les produits.
+  - `user.routes.js` : API pour lister et supprimer des utilisateurs.
+
+- **config/** :
+  - `db.config.js` : configuration de la connexion à Supabase (PostgreSQL).
+
+---
+
+## ⚙️ Fonctionnalités principales
+
+- Authentification avec `jsonwebtoken` et `bcryptjs`.
+- Gestion des rôles (admin et utilisateur simple).
+- CRUD complet sur les produits pour l'admin.
+- Gestion d’un panier utilisateur (ajout, suppression).
+- Sécurisation des routes sensibles avec vérification des rôles.
+- Communication sécurisée entre frontend et backend (CORS configuré).
+
+---
+
+## 🗄️ Base de données - Supabase
+
+- Base de données PostgreSQL hébergée sur Supabase.
+- 3 tables principales :
+  - `Users` : Stockage des utilisateurs.
+  - `Products` : Stockage des parfums.
+  - `CartItems` : Stockage du panier de chaque utilisateur.
+
+---
+
 
 # Wireframe
 ```
@@ -126,15 +215,4 @@ routes/ : Routes API (auth.routes.js, product.routes.js, user.routes.js)
 
 config/ : Configuration de la base de données (db.config.js)
 
-```
-
----
-### Fonctionnalités principales
-```
-Authentification : Login utilisateur (avec rôle : user/admin)
-Produit : Recherche de produits
-Panier : Ajout et suppression d'articles au panier
-Gestion des produits : Affichage, ajout, suppression de produits (admin uniquement)
-Gestion des utilisateurs : Supprimer des utilisateurs (sauf les admins)
-Sécurité : Mots de passe hashés avec bcryptjs et authentification par JWT
 ```
