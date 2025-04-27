@@ -1,6 +1,5 @@
 const { Sequelize } = require('sequelize');
 
-// Connection directe sans passer par config
 const sequelize = new Sequelize(
   process.env.DB_NAME,
   process.env.DB_USER,

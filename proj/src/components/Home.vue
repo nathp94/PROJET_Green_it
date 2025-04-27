@@ -6,7 +6,6 @@
       <router-link to="/products">
         <button class="explore-btn">Explore Products</button>
       </router-link>
-      <!-- Texte brut sur les mesures écologiques -->
       <p class="eco-info">
       We are committed to sustainability: optimized images, lazy loading, eco-friendly hosting, and minimal animations.
       </p>
