@@ -11,7 +11,7 @@ Avant de commencer, assurez-vous que **Node.js** est installé sur votre machine
 
 1. **Cloner le projet :**
    ```bash
-   git clone <URL_DU_DEPOT_GITHUB>
+   git clone https://github.com/nathp94/PROJET_Green_it
    ```
 
 
@@ -93,7 +93,7 @@ Sous-titre : "Discover our exclusive collection of perfumes and enjoy the best o
 
 ---------------------------------------------------
 
-Page Manage User
+Page Admin :Manage User
 
 HEADER
 
