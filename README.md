@@ -84,24 +84,25 @@ Peuvent occasionner des erreurs comme des délais d'attente ou des erreurs 502/5
 Page d'accueil User
 
 HEADER
----------------------------------------------------
+
 [Logo PARFUMERIE BABASSE]         [Home] [Products] [Login]
 
 BODY
----------------------------------------------------
+
 Titre : "Welcome to PARFUMERIE BABASSE"
 Sous-titre : "Discover our exclusive collection of perfumes and enjoy the best offers."
 [Bouton orange : "Explore Products"]
 
+---------------------------------------------------
 
 Page Manage User
 
 HEADER
----------------------------------------------------
+
 [Logo PARFUMERIE BABASSE]   [Home] [Products] [Cart] [Manage Product] [Manage Users] [Logout]
 
 BODY
----------------------------------------------------
+
 Manage Users
 admin — Role: admin        Admin (Not deletable)
 user1 — Role: user         User (Delete)
