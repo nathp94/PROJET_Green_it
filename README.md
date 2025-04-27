@@ -40,7 +40,7 @@ Depuis le dossier `proj/backend/` :
    cd proj/backend
    node server.js
    ```
-Si vous voulez reset la BDD, vous pouvez faire un node server.js depuis ce dossier.
+Si vous voulez reset la BDD, vous pouvez faire un node seed.js depuis ce dossier.
 
 ---
 
