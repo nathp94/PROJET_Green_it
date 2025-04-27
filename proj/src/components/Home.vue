@@ -6,6 +6,10 @@
       <router-link to="/products">
         <button class="explore-btn">Explore Products</button>
       </router-link>
+      <!-- Texte brut sur les mesures écologiques -->
+      <p class="eco-info">
+      We are committed to sustainability: optimized images, lazy loading, eco-friendly hosting, and minimal animations.
+      </p>
     </div>
   </div>
 </template>
@@ -80,4 +84,16 @@ export default {
     font-size: 18px;
   }
 }
+
+.eco-info {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  color: #fff;
+  opacity: 0.8;
+  text-align: center;
+}
+
 </style>
