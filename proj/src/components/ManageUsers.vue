@@ -25,6 +25,8 @@
 
 <script>
 import axios from 'axios';
+import { API_URL } from '@/api';
+
 
 export default {
   name: 'ManageUsers',
@@ -48,7 +50,7 @@ export default {
     },
     async fetchUsers() {
       try {
-        const response = await axios.get('http://localhost:3000/api/users');
+        const response = await axios.get(`${API_URL}/users`);
         this.users = response.data || [];
       } catch (error) {
         console.error('Error fetching users:', error);
@@ -58,7 +60,7 @@ export default {
     async removeUser(userId) {
       if (confirm('Are you sure you want to delete this user?')) {
         try {
-          await axios.delete(`http://localhost:3000/api/users/${userId}`);
+          await axios.delete(`${API_URL}/users/${userId}`);
           this.showMessage('User deleted successfully!', 'success');
           this.fetchUsers();
         } catch (error) {

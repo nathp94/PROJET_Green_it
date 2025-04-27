@@ -33,6 +33,7 @@
 
 <script>
 import axios from 'axios';
+import { API_URL } from '@/api';
 import { mapActions } from 'vuex'; // to interact with Vuex store
 
 export default {
@@ -50,7 +51,7 @@ export default {
     async login() {
   try {
 
-    const response = await axios.post('http://localhost:3000/api/auth/login', {
+    const response = await axios.post(`${API_URL}/auth/login`, {
       username: this.username,
       password: this.password,
 
@@ -76,7 +77,7 @@ export default {
     // Register user
     async signup() {
       try {
-        const response = await axios.post('http://localhost:3000/api/auth/register', {
+        const response = await axios.post(`${API_URL}/auth/register`, {
           username: this.username,
           password: this.password,
         });

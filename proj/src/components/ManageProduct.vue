@@ -83,7 +83,7 @@ export default {
       formData.append('image', this.product.image);  // Attach the image file
 
       try {
-        const response = await axios.post('http://localhost:3000/api/products', formData, {
+        const response = await axios.post('${API_URL}/products', formData, {
           headers: { 'Content-Type': 'multipart/form-data' }
         });
 

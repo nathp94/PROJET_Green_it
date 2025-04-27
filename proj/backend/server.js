@@ -11,8 +11,15 @@ const db = require('./models');
 // Create Express app
 const app = express();
 
+// CORS configuration
+const corsOptions = {
+  origin: '*', // 🔥 Pour tout autoriser (frontend local, Vercel, etc.)
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+};
+
 // Middleware
-app.use(cors());
+app.use(cors(corsOptions)); // ici avec les options
 app.use(bodyParser.json());
 
 // Import routes
