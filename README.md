@@ -60,7 +60,7 @@ admin123
 
 ## Déploiement
 
-Frontend : hébergé sur Vercel
+Frontend : hébergé sur Vercel (https://projet-green-it-yfgw.vercel.app/)
 
 Backend : hébergé sur Render
 
