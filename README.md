@@ -66,18 +66,14 @@ Backend : hébergé sur Render
 
 Base de données : hébergée sur Supabase (PostgreSQL)
 
+Frontend : Vue.js
+
+Backend : Express.js + Sequelize
+
 ## Hébergement et Disponibilité
 
-Notre projet est hébergé gratuitement sur des plateformes telles que Render (pour le backend) et Vercel (pour le frontend).
+Notre projet est hébergé gratuitement sur des plateformes telles que Render, Vercel et Supabase.
 Cependant, étant donné que nous utilisons des services gratuits, le serveur et le site web peuvent mettre plusieurs secondes à démarrer ou parfois être temporairement inaccessibles.
-
-En effet, les services gratuits :
-
-"Endorment" les serveurs après une période d'inactivité pour économiser des ressources.
-
-Limitent la puissance et la disponibilité par rapport aux plans payants.
-
-Peuvent occasionner des erreurs comme des délais d'attente ou des erreurs 502/504 temporaires.
 
 ---
 
@@ -108,3 +104,37 @@ BODY
 Manage Users
 admin — Role: admin        Admin (Not deletable)
 user1 — Role: user         User (Delete)
+
+---
+
+# Structure
+
+```
+Frontend (Vue.js)
+src/components/ : Composants principaux (Home, Products, Login, Cart, Admin Management)
+
+src/router/ : Configuration des routes de navigation
+
+src/store/ : Gestion globale de l'état de l'application (login, produits, panier)
+
+Backend (Express.js)
+server.js : Fichier principal du serveur
+
+models/ : Modèles Sequelize (user, product, cartItem)
+
+routes/ : Routes API (auth.routes.js, product.routes.js, user.routes.js)
+
+config/ : Configuration de la base de données (db.config.js)
+
+```
+
+---
+### Fonctionnalités principales
+
+Fonctionnalité | Description
+Authentification : Login utilisateur (avec rôle : user/admin)
+Produit : Recherche de produits
+Panier : Ajout et suppression d'articles au panier
+Gestion des produits : Affichage, ajout, suppression de produits (admin uniquement)
+Gestion des utilisateurs : Supprimer des utilisateurs (sauf les admins)
+Sécurité : Mots de passe hashés avec bcryptjs et authentification par JWT
