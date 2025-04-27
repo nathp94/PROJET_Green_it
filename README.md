@@ -78,18 +78,10 @@ Cependant, étant donné que nous utilisons des services gratuits, le serveur et
 
 ---
 
-### Fonctionnalités principales
-```
-Authentification : Login utilisateur (avec rôle : user/admin)
-Produit : Recherche de produits
-Panier : Ajout et suppression d'articles au panier
-Gestion des produits : Affichage, ajout, suppression de produits (admin uniquement)
-Gestion des utilisateurs : Supprimer des utilisateurs (sauf les admins)
-Sécurité : Mots de passe hashés avec bcryptjs et authentification par JWT
-```
+
 # Description des différentes parties du site et des fonctionnalités
 
-## 🌐 Frontend - Vue.js (dossier `proj/`)
+## 🌐 Frontend - Vue.js (dossier `proj/src`)
 
 - **HomePage (Accueil)** :
   - Présentation générale de la parfumerie.
@@ -153,15 +145,6 @@ Sécurité : Mots de passe hashés avec bcryptjs et authentification par JWT
 - Sécurisation des routes sensibles avec vérification des rôles.
 - Communication sécurisée entre frontend et backend (CORS configuré).
 
----
-
-## 🗄️ Base de données - Supabase
-
-- Base de données PostgreSQL hébergée sur Supabase.
-- 3 tables principales :
-  - `Users` : Stockage des utilisateurs.
-  - `Products` : Stockage des parfums.
-  - `CartItems` : Stockage du panier de chaque utilisateur.
 
 ---
 
