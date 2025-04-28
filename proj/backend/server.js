@@ -35,14 +35,14 @@ app.use('/api/users', userRoutes);
 // Database sync and start server
 db.sequelize.sync()
   .then(() => {
-    console.log('✅ Database connected and synchronized');
+    console.log('Database connected and synchronized');
     const PORT = process.env.PORT || 3000;
     app.listen(PORT, () => {
-      console.log(`🚀 Server is running on port ${PORT}`);
+      console.log(`Server is running on port ${PORT}`);
     });
   })
   .catch((error) => {
-    console.error('❌ Database connection failed:', error);
+    console.error('Database connection failed:', error);
   });
 
 // Export app

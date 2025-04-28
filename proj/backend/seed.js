@@ -4,7 +4,7 @@ const db = require('./models');
 
 const seedDatabase = async () => {
   try {
-    console.log('🔄 Synchronizing database...');
+    console.log('Synchronizing database...');
     await db.sequelize.sync({ force: true }); // Reset tables
     console.log('Database synchronized.');
 
