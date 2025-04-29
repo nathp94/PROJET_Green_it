@@ -87,7 +87,6 @@ Cependant, étant donné que nous utilisons des services gratuits, le serveur et
 (dossier `proj/src/components`)
 - **HomePage (Accueil)** :
   - Présentation générale de la parfumerie.
-  - Image de fond immersive.
   - Bouton "Explore Products" redirigeant vers les produits.
   
 - **ProductsPage (Produits)** :
