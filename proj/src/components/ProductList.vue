@@ -107,13 +107,14 @@ export default {
   gap: 20px;
 }
 
-.product-item {
-  border: 1px solid #ddd;
-  padding: 15px;
-  text-align: center;
-  border-radius: 5px;
-  background: #fff;
+.product-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 10px;
 }
+
 
 .product-item img {
   max-width: 100%;
