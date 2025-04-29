@@ -5,14 +5,14 @@ import ProductList from '../components/ProductList.vue';
 import Cart from '../components/Cart.vue';
 import ManageProduct from '../components/ManageProduct.vue';
 import Login from '../components/Login.vue';
-import ManageUsers from '../components/ManageUsers.vue'; // <-- AJOUT
+import ManageUsers from '../components/ManageUsers.vue';
 
 const routes = [
   { path: '/', component: Home },
   { path: '/products', component: ProductList },
   { path: '/cart', component: Cart, meta: { requiresAuth: true } },
   { path: '/manage-products', component: ManageProduct, meta: { requiresAdmin: true } },
-  { path: '/manage-users', component: ManageUsers, meta: { requiresAdmin: true } }, // <-- AJOUT
+  { path: '/manage-users', component: ManageUsers, meta: { requiresAdmin: true } }, 
   { path: '/login', component: Login, meta: { requiresGuest: true } },
 ];
 

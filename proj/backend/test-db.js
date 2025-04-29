@@ -22,9 +22,9 @@ const sequelize = new Sequelize(
 async function testConnection() {
   try {
     await sequelize.authenticate();
-    console.log('✅ Connected to Supabase database successfully.');
+    console.log('Connected to Supabase database successfully.');
   } catch (error) {
-    console.error('❌ Unable to connect to the Supabase database:', error);
+    console.error('Unable to connect to the Supabase database:', error);
   } finally {
     await sequelize.close();
   }

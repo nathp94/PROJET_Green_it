@@ -1,10 +1,10 @@
-require('dotenv').config(); // Charger .env
+require('dotenv').config(); // Charge .env
 const bcrypt = require('bcryptjs');
-const db = require('./models'); // Importer les models Sequelize
+const db = require('./models'); 
 
 const seedDatabase = async () => {
   try {
-    console.log('🔄 Synchronizing database...');
+    console.log('Synchronizing database...');
     await db.sequelize.sync({ force: true }); // Reset tables
     console.log('Database synchronized.');
 
@@ -246,5 +246,4 @@ const seedDatabase = async () => {
   }
 };
 
-// Executing the script
 seedDatabase();

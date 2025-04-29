@@ -13,13 +13,13 @@ const app = express();
 
 // CORS configuration
 const corsOptions = {
-  origin: '*', // 🔥 Pour tout autoriser (frontend local, Vercel, etc.)
+  origin: '*', 
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 };
 
 // Middleware
-app.use(cors(corsOptions)); // ici avec les options
+app.use(cors(corsOptions)); 
 app.use(bodyParser.json());
 
 // Import routes
@@ -35,14 +35,14 @@ app.use('/api/users', userRoutes);
 // Database sync and start server
 db.sequelize.sync()
   .then(() => {
-    console.log('✅ Database connected and synchronized');
+    console.log('Database connected and synchronized');
     const PORT = process.env.PORT || 3000;
     app.listen(PORT, () => {
-      console.log(`🚀 Server is running on port ${PORT}`);
+      console.log(`Server is running on port ${PORT}`);
     });
   })
   .catch((error) => {
-    console.error('❌ Database connection failed:', error);
+    console.error('Database connection failed:', error);
   });
 
 // Export app
