@@ -11,7 +11,7 @@ Avant de commencer, assurez-vous que **Node.js** est installé sur votre machine
 
 1. **Cloner le projet :**
    ```bash
-   git clone https://github.com/nathp94/PROJET_Green_it
+   git clone https://github.com/nathp94/PROJET_Green_it.git
    ```
 
 
